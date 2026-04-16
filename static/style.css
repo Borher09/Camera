@@ -1,0 +1,147 @@
+ :root {
+      --cor-primaria: #2563eb;
+      --cor-sucesso: #10b981;
+      --cor-fundo: #f8fafc;
+      --cor-card: #ffffff;
+      --cor-texto: #0f172a;
+      --cor-texto-secundario: #64748b;
+      --cor-borda: #e2e8f0;
+      --cor-erro: #ef4444;
+      --sombra: 0 8px 24px rgba(0, 0, 0, 0.08);
+      --raio: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: var(--cor-fundo);
+      color: var(--cor-texto);
+    }
+
+    h1 {
+      margin-bottom: 24px;
+      font-size: 1.6rem;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .painel {
+      width: 100%;
+      max-width: 420px;
+      background-color: var(--cor-card);
+      border: 1px solid var(--cor-borda);
+      border-radius: var(--raio);
+      box-shadow: var(--sombra);
+      padding: 24px;
+    }
+
+    .blocos {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .bloco {
+      background-color: #ffffff;
+      border: 1px solid var(--cor-borda);
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    .bloco-total {
+      text-align: center;
+      background-color: #f0fdf4;
+    }
+
+    .rotulo {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--cor-texto-secundario);
+      letter-spacing: 0.5px;
+    }
+
+    .valor {
+      font-size: 1.1rem;
+      font-weight: 700;
+      word-break: break-word;
+    }
+
+    .valor-total {
+      font-size: 3rem;
+      color: var(--cor-sucesso);
+      line-height: 1;
+    }
+
+    .status {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: var(--cor-texto-secundario);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    .status-ponto {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: var(--cor-sucesso);
+      animation: pulsar 1.8s infinite;
+      flex-shrink: 0;
+    }
+
+    .erro {
+      color: var(--cor-erro);
+    }
+
+    footer {
+      margin-top: 24px;
+      font-size: 0.8rem;
+      color: var(--cor-texto-secundario);
+      text-align: center;
+    }
+
+    @keyframes pulsar {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.25);
+        opacity: 0.6;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.3rem;
+      }
+
+      .painel {
+        padding: 18px;
+      }
+
+      .valor-total {
+        font-size: 2.4rem;
+      }
+    }
